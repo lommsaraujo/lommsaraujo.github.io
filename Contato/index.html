@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lomms Araújo</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap+Condensed">
+</head>
+
+<body id="app">
+  <main>
+    <!--/NavBar section-->
+    <div class="navbar">
+      <!--/icon section-->
+      <div class="nav-contact-links">
+        <a id="email-link" href="mailto:lomsaraujo@gmail.com" target="_blank" class="contact-link"><i
+            class="fas fa-at contact-icons"></i></a>
+        <a id="profile-link" href="https://www.instagram.com/lommsaraujo/" target="_blank" class="contact-link"><i
+            class="fab fa-instagram contact-icons"></i></a>
+        <a id="linkedin-link" href="https://www.youtube.com/@lommsaraujo2553" target="_blank" class="contact-link"><i
+            class="fab fa-youtube contact-icons"></i></a>
+        <a id="linkedin-link" href="https://www.tiktok.com/@lommsaraujo" target="_blank" class="contact-link"><i
+            class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <section id="nav-contact" class="nav-contact-section">
+        <nav id="navbar" class="nav">
+          <!--Pages section-->
+          <ul class="nav-list">
+            <li><a class="nav-link" href="index.html" rel="internal" style="text-decoration: none;">INICIO</a></li>
+            <li><a class="nav-link" href="Bio/index.html" rel="internal" style="text-decoration: none;">BIO</a></li>
+            <li><a class="nav-link" href="Teatro/index.html" rel="internal" style="text-decoration: none;">TEATRO</a>
+            </li>
+            <li><a class="nav-link" href="Videos/index.html" rel="internal" style="text-decoration: none;">VIDEOS</a>
+            </li>
+            <li><a class="nav-link" href="Contato/index.html" rel="internal" style="text-decoration: none;">CONTATO</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <!-- Mobile Nav -->
+    <div class="navbar-mini">
+      <a class="navmini-link" href="index.html" rel="internal"><i class="fas fa-house"></i></a>
+      <a class="navmini-link" href="Bio/index.html" rel="internal"><i class="fas fa-address-card"></i></a>
+      <a class="navmini-link" href="Theatre/index.html" rel="internal"><i class="fas fa-masks-theater"></i></a>
+      <a class="navmini-link" href="Videos/index.html" rel="internal"><i class="fas fa-film"></i></a>
+      <a class="navmini-link" href="Contact/index.html" rel="internal"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <!-- Contact Section-->
+    <div class="contact-section">
+      <img class="contact-image"
+        src="https://lh3.googleusercontent.com/drive-viewer/AFGJ81pTzb98C3Qaw7mYSALK5yk4nfYAFsb-4C9jX17yB8B0j6AGfu37MEHfowWE1aB9jxlKZxz1HiohvltcfhXGL8XnC7bI6w=s1600"
+        alt="project">
+      <div class="form-header">
+        <h4>Fala comigo!</h4>
+        <br>
+        <a class="email-btn" href="mailto:lomsaraujo@gmail.com">
+          envie um email
+        </a> <br><br>
+        <a class="ig-btn" href="https://www.instagram.com/lommsaraujo/">
+          conecte no Instagram
+
+        </a>
+      </div>
+    </div>
+
+    <!--TikTok section-->
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lommsaraujo" data-unique-id="lommsaraujo"
+      data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
+      <section> <a target="_blank" href="https://www.tiktok.com/@lommsaraujo?refer=creator_embed">@lommsaraujo</a>
+      </section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+  </main>
+  <!--/Footer section-->
+  <footer>
+    <div class="madeby"> Designed by <a href="https://www.linkedin.com/in/jasmin-cortez-/">Jasmin Cortez</a></div>
+  </footer>
+  <script rel="JavaScript" src="./script.js"></script>
+</body>
+
+<script>
+  const phoneInputField = document.querySelector("#phone");
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+  const info = document.querySelector(".alert-info");
+
+  function process(event) {
+    event.preventDefault();
+
+    const phoneNumber = phoneInput.getNumber();
+
+    info.style.display = "";
+    info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
+  }
+</script>
+
+</html>
