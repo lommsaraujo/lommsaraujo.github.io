@@ -1,54 +1,89 @@
-.showreel-video-page {
-  margin-bottom: 0;
-  max-width: 560px;
-  max-height: 315px;
-  width: 80vw;
-  height: calc(80vw / 1.77);
+:root {
+  --white: #fffffe;
+  --black: #0d0d0d;
+  --purple: #624cab;
+  --gray: rgba(248, 248, 248, 1);
+  --shadowblack: rgba(0, 0, 0, 0.13);
 }
 
-.video-section {
-  margin-bottom: 0;
-  max-height: 252px;
-  max-width: 448px;
-  width: 80vw;
-  height: calc(80vw / 1.77);
+.voice-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
 }
 
-.video-showreel {
-  width: 100vw;
+.voice-image {
+  height: 70vh;
+  width: auto;
+  margin-right: 30px;
 }
 
+.voice-info {
+  line-height: 1;
+  padding-top: 10px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
+  background-color: var(--white) !important;
+  border-radius: 10px;
+  box-shadow: var(--shadowblack) 0 3px 11px 0 !important;
+  width: 30%;
+}
+
+.p-info {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 18px;
+  text-align: left !important;
+}
+
+.audio-name {
+  margin: 0;
+  padding: 0;
+}
+
+audio {
+  margin-bottom: 30px;
+  width: 15vw;
+}
+
+.langs {
+  margin: 30px 0;
+}
 .lang-btn {
-  background-color: var(--black);
-  border-radius: 50%;
-  padding: 5px 20px 10px;
+  border: 2px solid var(--purple);
+  background-color: var(--white);
+  color: var(--black);
+  padding: 5px 10px 5px;
   margin: 0;
+  font-size: 18px;
 }
 
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  margin: auto;
-  max-width: 1280px;
-  row-gap: 8px;
+.audios-pt {
+  display: none;
 }
 
-.video-text {
-  margin: 0;
-  width: 100%;
-}
-
+/* APP */
 @media (max-width: 767px) {
-  .video-grid {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    align-items: center;
-    row-gap: 0;
+  .voice-image {
+    display: none;
+    margin: 0;
   }
 
-  .video-section {
-    margin: 0;
+  .voice-info {
+    width: 70%;
+    margin: 30px auto;
+    padding: 0;
+  }
+  audio {
+    width: 60vw;
+  }
+  .scroll-btn {
+    font-size: smaller;
+    margin-top: 50px;
   }
 }

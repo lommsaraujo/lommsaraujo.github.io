@@ -235,6 +235,51 @@ a:hover {
   color: var(--purple);
 }
 
+/* Spotlight + Elenco Digital */
+
+.casting-btn {
+  width: 50vw;
+  transform: scale(1.2, 1.2);
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.casting {
+  text-decoration: none;
+}
+
+.casting-2 {
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  padding: 4px 6px;
+  border-radius: 17.5px;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Source Sans Pro, sans-serif;
+}
+
+.icone-casting {
+  height: 27px;
+  width: 27px;
+}
+
+.container-casting {
+  font-size: 14px;
+  color: #4e4d92;
+  padding-bottom: 1px;
+  margin: 0 4px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
 /*Footer Style*/
 footer {
   background-color: transparent;
